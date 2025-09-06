@@ -2,7 +2,7 @@
 
 ## 0. Contents
 
-1.  [Description](#1.-description)
+1.  [Description](#description)
 
 2.  [Client configuration](#2.-client-configuration)
 
