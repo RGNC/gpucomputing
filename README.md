@@ -18,13 +18,13 @@
 Our mini-cluster is located at the Higher Technical School of Computer
 Engineering facilities, next to our Department of Computer Science and
 Artificial Intelligence. It is currently composed of **4** servers,
-named after the highest peaks of Spain: Teide (3715m, Canary Islands),
-Mulhacen (3479m, Granada), Aneto (3404m, Huesca), Veleta (3396m,
+named after the highest peaks of Spain: **Teide** (3715m, Canary Islands),
+**Mulhacen** (3479m, Granada), **Aneto** (3404m, Huesca), **Veleta** (3396m,
 Granada). The specifications are detailed at
 <http://www.gcn.us.es/gpu_computing_servers>. This is a picture of the
 servers taken in May 2022:
 
-<img src="./attachments/$myfilename/media/image1.jpeg"
+<img src="./media/image1.jpeg"
 style="width:1.85747in;height:2.95in" />
 
 The configuration is the following:
@@ -54,28 +54,33 @@ following.
 
 You should have Openssh Client in your operating system:
 
--   in Linux/Ubuntu: <span class="mark">sudo apt install
-    openssh-client</span> (or search openssh in your distribution)
+-   in Linux/Ubuntu: ```bash sudo apt install
+    openssh-client``` (or search openssh in your distribution)
 
 -   in Windows: install [Openssh Client
     feature](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse),
 
-You should have a folder <span class="mark">$HOME/.ssh</span> in your
+You should have a folder ```bash $HOME/.ssh``` in your
 home directory (in your computer). If not, please create it:
-<span class="mark">mkdir $HOME/.ssh</span>. Next, backup your
-<span class="mark">$HOME/.ssh/config</span> file if it exists already,
-by executing: <span class="mark">cp $HOME/.ssh/config
-$HOME/.ssh/config.backup</span>. If this config file doesn’t exist, just
+
+```bash mkdir $HOME/.ssh```
+
+Next, backup your ```bash $HOME/.ssh/config``` file if it exists already,
+by executing:
+
+```bash cp $HOME/.ssh/config $HOME/.ssh/config.backup```
+
+If this config file doesn’t exist, just
 continue with the next steps.
 
 Next, download the config file from these links (depending on your
 operating
 system): [linux ](https://github.com/RGNC/gpucomputing/blob/master/config/linux/config) or [windows](https://github.com/RGNC/gpucomputing/blob/master/config/windows/config).
-Copy the file to your <span class="mark">$HOME/.ssh</span> folder. If
+Copy the file to your ```bash $HOME/.ssh``` folder. If
 you had a config file previously, simply copy the contents to your
 existing file.
 
-Please, edit the <span class="mark">$HOME/.ssh/config</span> file with
+Please, edit the ```bash $HOME/.ssh/config``` file with
 your favourite editor, and replace **GPU-RGNC** by the public IP of our
 server, and **USER** by the username given to you in the mini-cluster
 (you should have received by email). Moreover, delete the comment (text
@@ -230,7 +235,7 @@ Please,
 double check that your booked GPU is idle. The outcome of the
 instruction should be something as follows:
 
-<img src="./attachments/$myfilename/media/image2.png"
+<img src="./media/image2.png"
 style="width:5.90556in;height:3.70347in" />
 
 In the example above, the first GPU is busy and 14GB is being used,
