@@ -2,13 +2,13 @@
 
 ## 0. Contents
 
-1.  [Description](#description)
+1.  [Description](#1-description)
 
-2.  [Client configuration](#2.-client-configuration)
+2.  [Client configuration](#2-client-configuration)
 
-3.  [Access](#3.-access)
+3.  [Access](#3-access)
 
-4.  [Working in a node](#4.-working-in-a-node) (link to the [**scheduler**](https://docs.google.com/spreadsheets/d/1APrUew3SSMiXYqRIpJWibmvGCGiTY1EvyZdHEr28Wn8/edit?usp=sharing))
+4.  [Working in a node](#4-working-in-a-node) (link to the [**scheduler**](https://docs.google.com/spreadsheets/d/1APrUew3SSMiXYqRIpJWibmvGCGiTY1EvyZdHEr28Wn8/edit?usp=sharing))
 
 
 
