@@ -1,19 +1,18 @@
-**GPU MINI-CLUSTER AT RESEARCH GROUP on NATURAL COMPUTING**
+# GPU MINI-CLUSTER AT RESEARCH GROUP on NATURAL COMPUTING
 
-**0. Contents**
+## 0. Contents
 
-1.  [Description](#description)
+1.  [Description](#1.-description)
 
-2.  [Client configuration](#configuration)
+2.  [Client configuration](#2.-client-configuration)
 
-3.  [Access](#access)
+3.  [Access](#3.-access)
 
-4.  [Working in a node](#working)
+4.  [Working in a node](#4.-working-in-a-node) (link to the [**scheduler**](https://docs.google.com/spreadsheets/d/1APrUew3SSMiXYqRIpJWibmvGCGiTY1EvyZdHEr28Wn8/edit?usp=sharing))
 
 
-**1. Description**
 
-<a name="description"/>
+## 1. Description
 
 Our mini-cluster is located at the Higher Technical School of Computer
 Engineering facilities, next to our Department of Computer Science and
@@ -45,9 +44,8 @@ The configuration is the following:
 -   **Teide** server is hidden behind Veleta server in a private
     network. It has two GPUs.
 
-**2. Client configuration**
 
-<a name="configuration"/>
+## 2. Client configuration
 
 If you want to access each node by its name from your computer, do the
 following.
@@ -147,9 +145,7 @@ an alternative such as
 [this](https://gist.github.com/nickbayley/ef2b6744b976c96db6e9).
 
 
-**3. Access**
-
-<a name="access"/>
+## 3. Access
 
 If you have configured your ssh client as in previous section, you can
 access to each node independently. So, depending on the server (replace
@@ -192,12 +188,9 @@ attacks. In order to change the password, please execute
 centralized user directory for the moment).
 
 
+## 4. Working in a node
 
-**4. Working in a node**
-
-<a name="working"/>
-
-**4.1 Book a time slot for your work**
+### 4.1 Book a time slot for your work
 
 Given the high demand we have for our GPUs, please select a time slot in
 our
@@ -209,7 +202,7 @@ be responsible and do not reserve the GPUs more than you expect to need
 (e.g. no more than two days in a row). Moreover, do not delete a
 reservation made by other user. We trust on the good behaviour of the
 users. In case you are having problems with other users, please notify
-to mdelamor ‘at’ us.es with the subject: \[GPU at RGNC\] USER REPORT,
+the <a href="https://miguelamda.github.io/">administrator</a> with the subject: \[GPU at RGNC\] USER REPORT,
 and explain the situation.
 
 This is a temporary solution while we have a high demand, it can be
@@ -224,7 +217,7 @@ etc. Also note that other users might consume all RAM memory when using
 one GPU only. If this happens and you have booked the other GPU in the
 system, please report to mdelamor.
 
-**4.2 Selecting your GPU**
+### 4.2 Selecting your GPU
 
 Once you are logged in a node, you can check which GPUs are available
 and their status typing: 
@@ -259,7 +252,7 @@ If you want to use GPU number 0 again, type:
 
 ```bash export CUDA\_VISIBLE\_DEVICES=0```
 
-**4.3 Storage**
+### 4.3 Storage
 
 All servers should have enough storage for your needs, but please check
 that home or / is not full by executing ```bash df -h```.
@@ -268,7 +261,7 @@ consider moving it to the <span class="mark">/data</span> partition
 (Veleta, Mulhacen and Teide only). This partition has lot of space (1TB
 in Mulhacen and 2TB in Teide, Veleta has no such partition yet).
 
-**4.3 Selecting your compiler / development kit**
+### 4.4 Selecting your compiler / development kit
 
 We use **CVMFS** in all nodes for accessing different compilers and
 libraries versions. This is a CERN virtual file system with lot of
@@ -305,7 +298,7 @@ Machine Learning. If you need other software to get installed, and admin
 credentials are need, please email to mdelamor ‘at’ us.es with the
 subject \[GPU at RGNC\] SOFTWARE INSTALL.
 
-**4.3 Launching Jupyter Notebook for Python/Deep Learning**
+### 4.5 Launching Jupyter Notebook for Python/Deep Learning
 
 Both Jupyter Notebook and Lab are installed in all nodes. If you need to
 execute a remote **Jupyter notebook** environment, then do the following
@@ -326,7 +319,7 @@ anaconda is installed in our severs (though the
 custom configuration. Please keep it at minimum since the disk space is
 limited, so consider using *miniconda* instead.
 
-**4.4 Remote development with NVIDIA Nsight Visual Studio Code**
+### 4.6 Remote development with NVIDIA Nsight Visual Studio Code
 
 It is possible to use Remote Explorer plugin of NVIDIA Nsight Visual
 Studio in our servers. You will need to configure .ssh/config file from
@@ -342,7 +335,7 @@ Have fun, and wish you an efficient code!
 -------
 v9.0, 06-09-2025
 
-Miguel Ángel Martínez del Amor,  
+<a href="https://miguelamda.github.io/">Miguel Ángel Martínez del Amor</a>,  
 Research Group on Natural Computing  
 University of Seville
 
