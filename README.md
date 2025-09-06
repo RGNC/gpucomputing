@@ -52,21 +52,21 @@ following.
 
 You should have Openssh Client in your operating system:
 
--   in Linux/Ubuntu: ```bash sudo apt install
+-   in Linux/Ubuntu: ``` sudo apt install
     openssh-client``` (or search openssh in your distribution)
 
 -   in Windows: install [Openssh Client
     feature](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse),
 
-You should have a folder ```bash $HOME/.ssh``` in your
+You should have a folder ``` $HOME/.ssh``` in your
 home directory (in your computer). If not, please create it:
 
-```bash mkdir $HOME/.ssh```
+``` mkdir $HOME/.ssh```
 
-Next, backup your ```bash $HOME/.ssh/config``` file if it exists already,
+Next, backup your ``` $HOME/.ssh/config``` file if it exists already,
 by executing:
 
-```bash cp $HOME/.ssh/config $HOME/.ssh/config.backup```
+``` cp $HOME/.ssh/config $HOME/.ssh/config.backup```
 
 If this config file doesn’t exist, just
 continue with the next steps.
@@ -74,11 +74,11 @@ continue with the next steps.
 Next, download the config file from these links (depending on your
 operating
 system): [linux ](https://github.com/RGNC/gpucomputing/blob/master/config/linux/config) or [windows](https://github.com/RGNC/gpucomputing/blob/master/config/windows/config).
-Copy the file to your ```bash $HOME/.ssh``` folder. If
+Copy the file to your ``` $HOME/.ssh``` folder. If
 you had a config file previously, simply copy the contents to your
 existing file.
 
-Please, edit the ```bash $HOME/.ssh/config``` file with
+Please, edit the ``` $HOME/.ssh/config``` file with
 your favourite editor, and replace **GPU-RGNC** by the public IP of our
 server, and **USER** by the username given to you in the mini-cluster
 (you should have received by email). Moreover, delete the comment (text
@@ -121,22 +121,22 @@ Mulhacen or Aneto through Veleta, execute the following lines in your
 machine by simply replacing replace **USER** with your username given in
 the mini-cluster (if you are a Windows user, please see the note below):
 
-1.  ```bash ssh-keygen -t rsa -b 2048```   (press enter
+1.  ``` ssh-keygen -t rsa -b 2048```   (press enter
     for all the prompted questions)
 
-2.  ```bash ssh-copy-id USER@veleta```   (insert your
+2.  ``` ssh-copy-id USER@veleta```   (insert your
     password all the required times)
 
-3.  <s>```bash ssh-copy-id USER@aneto```   (insert your
+3.  <s>``` ssh-copy-id USER@aneto```   (insert your
     password all the required times)</s>
 
-4.  ```bash ssh-copy-id USER@mulhacen```   (insert your
+4.  ``` ssh-copy-id USER@mulhacen```   (insert your
     password all the required times)
 
-5.  ```bash ssh-copy-id USER@teide```     (insert your
+5.  ``` ssh-copy-id USER@teide```     (insert your
     password all the required times)
 
-Try for example ```bash ssh **USER**@mulhacen```, and check that you are
+Try for example ``` ssh **USER**@mulhacen```, and check that you are
 requested only once for your password.
 
 Note: For Windows users, ssh-copy-id does not exist, so you have to use
@@ -151,16 +151,16 @@ If you have configured your ssh client as in previous section, you can
 access to each node independently. So, depending on the server (replace
 **USER** by your username in the mini-cluster):
 
--   Access to Veleta: ```bash ssh
+-   Access to Veleta: ``` ssh
     USER@veleta```
 
--   <s>Access to Aneto: ```bash ssh
+-   <s>Access to Aneto: ``` ssh
     USER@aneto```</s>
 
--   Access to Mulhacen: ```bash ssh
+-   Access to Mulhacen: ``` ssh
     USER@mulhacen```
 
--   Access to Teide: ```bash ssh
+-   Access to Teide: ``` ssh
     USER@teide```
 
 Once you have accessed to the desired server, you can run your programs
@@ -168,23 +168,23 @@ remotely. If you need to copy files to and from the servers, do the
 following (replace **USER** by your username and **NODE** by your
 desired node, either veleta, aneto, mulhacen or teide):
 
--   Copy a file to a NODE: ```bash scp YOUR\_FILE
+-   Copy a file to a NODE: ``` scp YOUR\_FILE
     USER@NODE:```
 
--   Copy a file from a NODE: ```bash scp
+-   Copy a file from a NODE: ``` scp
     [USER@](mailto:username@teide)NODE:YOUR\_FILE .```
 
--   Copy a folder to a NODE: ```bash scp -r YOUR\_FOLDER
+-   Copy a folder to a NODE: ``` scp -r YOUR\_FOLDER
     USER@NODE:```
 
--   Copy a folder from a NODE: ```bash scp -r
+-   Copy a folder from a NODE: ``` scp -r
     [USER@](mailto:username@teide)NODE:YOUR\_FOLDER .```
 
 Please, keep using the password that you were given, or change it by
 another secured password. DO NOT use as password same your username,
 or this kind of bad practices, since we are receiving lot of external
 attacks. In order to change the password, please execute
-```bash passwd``` in each server (we don’t have a
+``` passwd``` in each server (we don’t have a
 centralized user directory for the moment).
 
 
@@ -222,7 +222,7 @@ system, please report to mdelamor.
 Once you are logged in a node, you can check which GPUs are available
 and their status typing: 
 
-```bash nvidia-smi``` 
+``` nvidia-smi``` 
 
 Please,
 double check that your booked GPU is idle. The outcome of the
@@ -242,20 +242,20 @@ performance.
 By default you are given GPU number 0. In order to select a different
 GPU, or you want to use GPU number 1, type: 
 
-```bash export CUDA\_VISIBLE\_DEVICES=1```
+``` export CUDA\_VISIBLE\_DEVICES=1```
 
 If you want to use both GPUs, type:
 
-```bash export CUDA\_VISIBLE\_DEVICES=0,1```
+``` export CUDA\_VISIBLE\_DEVICES=0,1```
 
 If you want to use GPU number 0 again, type: 
 
-```bash export CUDA\_VISIBLE\_DEVICES=0```
+``` export CUDA\_VISIBLE\_DEVICES=0```
 
 ### 4.3 Storage
 
 All servers should have enough storage for your needs, but please check
-that home or / is not full by executing ```bash df -h```.
+that home or / is not full by executing ``` df -h```.
 If you are using a large dataset, or you have lot of data, please
 consider moving it to the <span class="mark">/data</span> partition
 (Veleta, Mulhacen and Teide only). This partition has lot of space (1TB
@@ -269,14 +269,14 @@ development tools compiled for Red Hat based systems (CentOS,
 RockyLinux, AlmaLinux…). All our servers run Rocky Linux 9. In order to
 use cvmfs, do the following:
 
-1.  ```bashls /cvmfs/sft.cern.ch/lcg/releases``` (this
+1.  ```ls /cvmfs/sft.cern.ch/lcg/releases``` (this
     will mount the remote file system, and you will see all tools
     available, it is a long list)
 
 2.  For instance, if you want to use another version of *gcc* than the
     default one, select your version:
 
-    -   First, execute ```bash ls /cvmfs/sft.cern.ch/lcg/releases/gcc``` to see all available
+    -   First, execute ``` ls /cvmfs/sft.cern.ch/lcg/releases/gcc``` to see all available
         versions.
 
     -   Select a version with a subfolder with centos9 (although centos7
@@ -284,7 +284,7 @@ use cvmfs, do the following:
 
     -   For example, assume you want to use GCC 11.3.1, then just
         type:  
-        ```bash source /cvmfs/sft.cern.ch/lcg/releases/gcc/11.3.1/x86\_64-centos9/setup.sh```
+        ``` source /cvmfs/sft.cern.ch/lcg/releases/gcc/11.3.1/x86\_64-centos9/setup.sh```
 
 3.  Some other libraries instead of requiring a source file, just need
     to adjust your $PATH or your $LD\_LIBRARY\_PATH to that folder (for
@@ -305,9 +305,9 @@ execute a remote **Jupyter notebook** environment, then do the following
 (replace **USER** by your username and **NODE** by your desired node,
 either veleta, aneto, mulhacen or teide):
 
-1.  Type in your machine: ```bash ssh -L 8888:localhost:8888  USER@NODE```
+1.  Type in your machine: ``` ssh -L 8888:localhost:8888  USER@NODE```
 
-2.  In the node you chose, type: ```bash jupyter notebook --port=8888 --no-browser```
+2.  In the node you chose, type: ``` jupyter notebook --port=8888 --no-browser```
     Copy the URL with the token shown at the end.
 
 3.  Now in your browser, paste the URL you copied before.
@@ -315,7 +315,7 @@ either veleta, aneto, mulhacen or teide):
 If more than one user is using Jupyter notebook in the same server, **please change
 your port** in the lines above (instead of 9999, use e.g. 8889, 8890, 8891, etc.). Finally,
 anaconda is installed in our severs (though the
-```bash conda``` command), in case you need to install a
+``` conda``` command), in case you need to install a
 custom configuration. Please keep it at minimum since the disk space is
 limited, so consider using *miniconda* instead.
 
