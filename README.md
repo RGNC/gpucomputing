@@ -242,15 +242,15 @@ performance.
 By default you are given GPU number 0. In order to select a different
 GPU, or you want to use GPU number 1, type: 
 
-``` export CUDA\_VISIBLE\_DEVICES=1```
+``` export CUDA_VISIBLE_DEVICES="1"```
 
 If you want to use both GPUs, type:
 
-``` export CUDA\_VISIBLE\_DEVICES=0,1```
+``` export CUDA_VISIBLE_DEVICES="0,1"```
 
 If you want to use GPU number 0 again, type: 
 
-``` export CUDA\_VISIBLE\_DEVICES=0```
+``` export CUDA_VISIBLE_DEVICES="0"```
 
 ### 4.3 Storage
 
@@ -333,7 +333,7 @@ Have fun, and wish you an efficient code!
 
 
 -------
-v9.0, 06-09-2025
+v9.1, 17-10-2025
 
 <a href="https://miguelamda.github.io/">Miguel Ángel Martínez del Amor</a>,  
 Research Group on Natural Computing  
